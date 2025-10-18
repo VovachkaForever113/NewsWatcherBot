@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+bot:
+build: .
+volumes:
+- ./:/app
+- ./news.db:/app/news.db
+environment:
+- BOT_TOKEN=${BOT_TOKEN}
+- TG_API_ID=${TG_API_ID}
+- TG_API_HASH=${TG_API_HASH}
+- DB_PATH=/app/news.db
+- DEFAULT_CHANNELS=${DEFAULT_CHANNELS}
+- PAGE_SIZE=${PAGE_SIZE}
+restart: unless-stopped

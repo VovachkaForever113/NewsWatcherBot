@@ -1,0 +1,4 @@
+aiogram==3.10.0
+telethon==1.28.5
+python-dotenv==1.0.0
+aiofiles==23.2.1
